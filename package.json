@@ -1,0 +1,23 @@
+{
+  "name": "TestingElectron",
+  "version": "1.0.0",
+  "description": "Doing some basic testing to see how Electron works",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anirudha-ani/TestingElectron.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anirudha-ani/TestingElectron/issues"
+  },
+  "homepage": "https://github.com/anirudha-ani/TestingElectron#readme",
+  "devDependencies": {
+    "electron": "^11.0.4"
+  }
+}
