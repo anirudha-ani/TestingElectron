@@ -18,6 +18,8 @@ function createWindow() {
     const serverIp = `http://${ip.address()}:${port}`
 
     //Change this file name to your desired 
+    //Example "photo.jpg", "sample.pdf" , "video.mp4"
+    
     const fileName = "photo.jpg"
 
     const linkForQRCode = `${serverIp}/${fileName}`
