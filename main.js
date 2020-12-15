@@ -8,7 +8,7 @@ const ps = fork(`${__dirname}/server.js`)
 function createWindow() {
     const win = new BrowserWindow({
         width: 800,
-        height: 600,
+        height: 700,
         webPreferences: {
             nodeIntegration: true
         }
@@ -20,7 +20,7 @@ function createWindow() {
     //Change this file name to your desired 
     //Example "photo.jpg", "sample.pdf" , "video.mp4"
     
-    const fileName = "photo.jpg"
+    const fileName = "output.xml"
 
     const linkForQRCode = `${serverIp}/${fileName}`
 

@@ -3,25 +3,170 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
-    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <title>Device configuration</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="profileCreator.js"></script>
 </head>
 
 <body style="background: white;">
-    <h1>Sending file through QR Code. </h1>
-    <h2>Scan the below QR Code and download the content</h2>
-    <p>
-        We are using node
-        <script>document.write(process.versions.node)</script>,
-        Chrome
-        <script>document.write(process.versions.chrome)</script>,
-        and Electron
-        <script>document.write(process.versions.electron)</script>.
-    </p>
-    <canvas id="canvas"></canvas>
-    <script>
-        require("./qrcode.js")
-    </script>
+    <div class="container" style="margin-top: 20px;">
+        <h2>Device configuration</h2>
+        <p>Set your device configuration from below</p>
+        <form action="" method="post">
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label-lg col-sm-4 pt-0">Screen timeout:</legend>
+              <div class="col-sm-8">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="screen_timeout" id="screenTimeout_one" value="1">
+                  <label class="form-check-label" for="screenTimeout_one">
+                    1 minute
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="screen_timeout" id="screenTimeout_two" value="2">
+                  <label class="form-check-label" for="screenTimeout_two">
+                    2 minutes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="screen_timeout" id="screenTimeout_five" value="5">
+                  <label class="form-check-label" for="screenTimeout_five">
+                    5 minutes
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="screen_timeout" id="screenTimeout_ten" value="10">
+                  <label class="form-check-label" for="screenTimeout_ten">
+                    10 minutes
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label-lg col-sm-4 pt-0">Sound mode:</legend>
+              <div class="col-sm-8">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="sound_mode" id="sound" value="sound">
+                  <label class="form-check-label" for="sound">
+                    Sound
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="sound_mode" id="vibration" value="vibration">
+                  <label class="form-check-label" for="vibration">
+                    Vibration
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="sound_mode" id="mute" value="mute">
+                  <label class="form-check-label" for="mute">
+                    Mute
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label-lg col-sm-4 pt-0">Lock type::</legend>
+              <div class="col-sm-8">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="lock_type" id="pin" value="pin">
+                  <label class="form-check-label" for="pin">
+                    Pin
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="lock_type" id="face" value="face">
+                  <label class="form-check-label" for="face">
+                    Face
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="lock_type" id="finger_prints" value="finger_prints">
+                  <label class="form-check-label" for="finger_prints">
+                    Finger prints
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label-lg col-sm-4 pt-0">Adaptive brightness: </legend>
+              <div class="col-sm-8">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="adaptive_brightness: " id="adaptive_brightness_on" value="on">
+                  <label class="form-check-label" for="adaptive_brightness_on">
+                    On
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="adaptive_brightness" id="adaptive_brightness_off" value="off">
+                  <label class="form-check-label" for="adaptive_brightness_off">
+                    Off
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="form-group">
+            <div class="row">
+              <legend class="col-form-label-lg col-sm-4 pt-0">Font size:</legend>
+              <div class="col-sm-8">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="font_size" id="small" value="small">
+                  <label class="form-check-label" for="small">
+                    Small
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="font_size" id="medium" value="medium">
+                  <label class="form-check-label" for="medium">
+                    Medium
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="font_size" id="large" value="large">
+                  <label class="form-check-label" for="large">
+                    Large
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+      
+          <div class="form-group row">
+            <div class="col-sm-4">
+              <button type="button" onclick="createProfile(this.form)" class="btn btn-primary">Create Profile</button>
+            </div>
+            <div class="col-sm-8">
+              <p id="createProfileConfirmation" style="display: none; color:green;"> 
+                Profile created successfully with device config. 
+                Scan below QR Code for getting the profile in mobile.
+              </p>
+            </div>
+          </div>
+          <div class="form-group row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-8">
+              <canvas id="canvas" style="display: none;"></canvas>
+              <script>
+                  require("./qrcode.js")
+              </script>
+            </div>
+          </div>
+        </form>
+      </div>
+    
 </body>
 
 </html>
